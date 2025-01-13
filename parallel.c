@@ -6,7 +6,6 @@
 
 /*
  *  PHASE 1: compute the mean pixel value
- *  This code is buggy! Find the bug and speed it up.
  */
 void mean_pixel_parallel(const uint8_t img[][NUM_CHANNELS], int num_rows, int num_cols, double mean[NUM_CHANNELS])
 {
@@ -42,7 +41,6 @@ void mean_pixel_parallel(const uint8_t img[][NUM_CHANNELS], int num_rows, int nu
 
 /*
  *  PHASE 2: convert image to grayscale and record the max grayscale value along with the number of times it appears
- *  This code is NOT buggy, just sequential. Speed it up.
  */
 
 void grayscale_parallel(const uint8_t img[][NUM_CHANNELS], int num_rows, int num_cols, uint32_t grayscale_img[][NUM_CHANNELS], uint8_t *max_gray, uint32_t *max_count)
@@ -140,7 +138,6 @@ void grayscale_parallel(const uint8_t img[][NUM_CHANNELS], int num_rows, int num
 
 /*
  *  PHASE 3: perform convolution on image
- *  This code is NOT buggy, just sequential. Speed it up.
  */
  
 void convolution_parallel(const uint8_t padded_img[][NUM_CHANNELS], int num_rows, int num_cols, const uint32_t kernel[], int kernel_size, uint32_t convolved_img[][NUM_CHANNELS])
