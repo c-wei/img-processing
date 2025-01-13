@@ -1,8 +1,3 @@
-/*
- *  Name: Caroline Wei
- *  UID: 306220886
- */
-
 #include <stdlib.h>
 #include <omp.h>
 
